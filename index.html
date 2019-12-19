@@ -1,0 +1,100 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Survey Form
+        </title>
+    </head>
+
+    <body>
+<!--<script>
+            function validate() {
+                var email = document.getElementById("email");
+             if (email == /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+              {
+                return (true)
+              }
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+            </script>-->
+      
+        <div class="form-section">
+          <header>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Description</p>
+          </header>
+            <form id="survey-form">
+              
+                <fieldset>
+                  
+                    <legend>
+                  <br>
+                  <br>
+                  <br>
+                      
+                      Basic Information Requirement: </legend>
+                    <div class="label-left">
+                        <label id="name-label" for="name">*Your Name: </label>
+                        <input type="text" name="text-input" id="name" placeholder="Enter your name" required>
+                    </div><br>
+                    <div class="label-left">
+                        <label id="email-label" for="email">*Your Email:</label>
+                        <input type="email" name="text-input" id="email" placeholder="Enter your email" required>
+                        <p id="emailErr"></p>
+                    </div><br>
+                    <div class="label-left">
+                        <label id="number-label" for="age">*Your Phone Number: </label>
+                        <input type="number" name="text-input" id="number" placeholder="Enter your age" required min="16" max="70">
+                        <p id="numErr"></p>
+                    </div>
+                </fieldset>
+                <br>
+                <hr>
+                <div class="extra-info">
+                    <p>Additional Info: </p>
+                    <div class="dropdown-menu">
+                        <label for="dropdown">*Gender: </label>
+                        <select id="dropdown">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>    
+                    <div class="radio-button">
+                        <p>Rate my site: </p>
+                        <label for="rate-site" id="left-radio">Not bad </label>
+                        <input type="radio" name="rate-site"  value="notBad">
+                        <input type="radio" name="rate-site" value="Good">
+                        <input type="radio" name="rate-site" value="Average">
+                        <input type="radio" name="rate-site" value="Very Good">
+                        <input type="radio" name="rate-site" value="Excellent">
+                        <label for="rate-site" id="right-radio"> Excellent</label>
+                    </div>
+                    <div class="checkbox-button">
+                        <p>Improvements for user experience (select all that applies)</p>
+                        <label for="checkbox-button"><input type="checkbox" name="checkbox-button" value="appeareance">More color</label for="checkbox-button">
+                        <label><input type="checkbox" name="checkbox-button" value="More fileds">More input Fields</label>
+                        <label for="checkbox-button"><input type="checkbox" value="betterDesign">A better Design</label>
+                    </div><br>
+                    <div class="text-submit">
+                        <p>Suggestions</p>
+                        <textarea rows="4" cols="20"></textarea><br>
+                        <button type="submit" onclick="validate()" id="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
